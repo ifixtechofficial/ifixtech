@@ -58,11 +58,11 @@ body {
 
 /* ── HEADER ── */
 .header {
-    background: rgba(8,18,31,0.85) !important;
+    background: rgba(27,45,79,0.96) !important;
     backdrop-filter: blur(18px) !important;
-    border-bottom: 1px solid var(--border) !important;
+    border-bottom: 1px solid rgba(74,144,217,0.25) !important;
 }
-.header.scrolled { background: rgba(8,18,31,0.97) !important; }
+.header.scrolled { background: rgba(27,45,79,1) !important; }
 
 /* ── LOGO ── */
 .logo { color: #FFFFFF; text-decoration: none; display: flex; align-items: center; gap: 0.9rem; transition: opacity 0.2s; }
