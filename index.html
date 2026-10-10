@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -429,9 +429,6 @@
             .logo-sub { display: none; }
             /* Hide nav CTA button — only hamburger shows on mobile */
             #openModal { display: none !important; }
-            .nav-links { display: none; position: fixed; top: 72px; left: 0; right: 0; bottom: 0; background: var(--bg-page); flex-direction: column; justify-content: center; align-items: center; gap: 2rem; border-top: 1px solid var(--border); z-index: 999; }
-            .nav-links.open { display: flex; }
-            .mobile-menu { display: block; }
             .hero { padding: 110px 0 60px; }
             .hero-title { font-size: 2.5rem; }
             .hero-stats { grid-template-columns: repeat(3,1fr); gap: 1rem; }
@@ -463,6 +460,7 @@
             .section-title { font-size: 1.75rem; }
         }
     </style>
+<link rel="stylesheet" href="mobile-nav.css">
 </head>
 <body>
 
@@ -497,6 +495,7 @@
                 <li><a href="services.html">Services</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li class="nav-extra"><a href="contact.html" class="nav-cta"><i class="fas fa-calendar-check"></i> Get a Free Consultation</a><a href="mailto:ifixtechofficial@gmail.com" class="nav-mail"><i class="fas fa-envelope"></i> ifixtechofficial@gmail.com</a></li>
             </ul>
 
             <div style="display:flex;gap:0.75rem;align-items:center;">

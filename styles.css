@@ -346,28 +346,7 @@ a:hover { color: #6BAED6; }
     .logo-name { font-size: 1.45rem !important; }
     .logo-sub  { display: none !important; }
 
-    /* ── Nav: hide desktop CTA, show hamburger only ── */
-    .header .btn, .nav > div > .btn,
-    .header .btn-primary { display: none !important; }
-    .mobile-menu, .mobile-toggle, .hamburger,
-    [class*="mobile-menu"], [class*="nav-toggle"],
-    [class*="menu-btn"] { display: block !important; }
-
-    /* ── Nav dropdown ── */
-    .nav-links {
-        display: none !important;
-        position: fixed !important;
-        top: 70px !important; left: 0 !important; right: 0 !important; bottom: 0 !important;
-        background: #08121F !important;
-        flex-direction: column !important;
-        justify-content: center !important; align-items: center !important;
-        gap: 2rem !important;
-        border-top: 1px solid rgba(74,144,217,0.2) !important;
-        z-index: 998 !important;
-    }
-    .nav-links.open, .nav-links.active { display: flex !important; }
-    .nav-links a { font-size: 1.25rem !important; color: #FFFFFF !important; }
-    .nav { padding: 0.65rem 0 !important; }
+    /* Mobile nav lives in mobile-nav.css */
 
     /* ── Hero / page hero padding ── */
     .hero, .page-hero, .about-hero, .services-hero, .contact-hero,
