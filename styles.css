@@ -74,7 +74,7 @@ label { color: #7FA8CC !important; }
 /* ── LOGO ── */
 .logo { color: #FFFFFF; text-decoration: none; display: flex; align-items: center; gap: 0.9rem; transition: opacity 0.2s; }
 .logo:hover { opacity: 0.88; transform: none !important; }
-.logo-img { height: 58px; width: 58px; flex-shrink: 0; object-fit: contain; border-radius: 12px; background: #ffffff; padding: 6px; }
+.logo-img { height: 64px; width: auto; flex-shrink: 0; object-fit: contain; }
 .logo-text { display: flex; flex-direction: column; line-height: 1.15; }
 .logo-name { font-family: 'Rajdhani', sans-serif; font-size: 2rem; }
 .logo-ifix { font-weight: 400; color: #FFFFFF; }
@@ -333,6 +333,6 @@ a:hover { color: #6BAED6; }
 
 /* Responsive logo */
 @media (max-width: 768px) {
-    .logo-img  { height: 46px !important; width: 46px !important; padding: 5px !important; }
+    .logo-img  { height: 50px !important; width: auto !important; }
     .logo-name { font-size: 1.6rem !important; }
 }
