@@ -424,29 +424,43 @@
             .footer-grid { grid-template-columns: 1fr 1fr; }
         }
         @media (max-width: 768px) {
-            .logo-img { height: 54px; }
-            .logo-name { font-size: 1.6rem; }
-            .nav-links { display: none; position: fixed; top: 80px; left: 0; right: 0; bottom: 0; background: var(--bg-page); flex-direction: column; justify-content: center; align-items: center; gap: 2rem; border-top: 1px solid var(--border); }
+            .logo-img { height: 48px; }
+            .logo-name { font-size: 1.45rem; }
+            .logo-sub { display: none; }
+            /* Hide nav CTA button — only hamburger shows on mobile */
+            #openModal { display: none !important; }
+            .nav-links { display: none; position: fixed; top: 72px; left: 0; right: 0; bottom: 0; background: var(--bg-page); flex-direction: column; justify-content: center; align-items: center; gap: 2rem; border-top: 1px solid var(--border); z-index: 999; }
             .nav-links.open { display: flex; }
             .mobile-menu { display: block; }
-            .hero { padding: 130px 0 70px; }
-            .hero-title { font-size: 2.75rem; }
-            .hero-stats { grid-template-columns: 1fr; }
+            .hero { padding: 110px 0 60px; }
+            .hero-title { font-size: 2.5rem; }
+            .hero-stats { grid-template-columns: repeat(3,1fr); gap: 1rem; }
+            .hero-card { display: none; }
             .section-title { font-size: 2rem; }
             .services-grid { grid-template-columns: 1fr; }
             .service-card.wide { grid-column: span 1; }
-            .process-grid { grid-template-columns: 1fr; }
-            .stats-grid { grid-template-columns: 1fr; }
+            .process-grid { grid-template-columns: 1fr 1fr; }
+            .stats-grid { grid-template-columns: repeat(2,1fr); }
             .stat-card { border-right: none; border-bottom: 1px solid var(--border); }
+            .stat-card:nth-child(even) { border-right: none; }
             .testimonials-grid { grid-template-columns: 1fr; }
             .testimonials-grid .testimonial-card:last-child { grid-column: span 1; max-width: 100%; }
-            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
             .cta-inner .section-title { font-size: 2rem; }
             .form-row { grid-template-columns: 1fr; }
+            .nav { padding: 0.65rem 0; }
         }
         @media (max-width: 480px) {
             .container { padding: 0 1rem; }
+            .hero-title { font-size: 2rem; }
+            .hero-stats { grid-template-columns: 1fr; }
             .hero-cta { flex-direction: column; }
+            .hero-cta .btn { width: 100%; justify-content: center; }
+            .process-grid { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: 1fr; }
+            .stat-card { border-bottom: 1px solid var(--border); }
+            .footer-grid { grid-template-columns: 1fr; }
+            .section-title { font-size: 1.75rem; }
         }
     </style>
 </head>

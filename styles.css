@@ -257,13 +257,15 @@ html { background: var(--bg-page) !important; }
 .story-section, .why-choose-section, .features-section, .comparison-section,
 .contact-form-section, .pricing-section, .info-section, .timeline-section,
 .culture-section, .history-section, .awards-section, .clients-section,
-.overview-section, .technologies-section, .deliverables-section {
+.overview-section, .technologies-section, .deliverables-section,
+.services-section-inner, .quick-contact-section {
     background: var(--bg-page) !important;
 }
 .mission-section, .impact-section, .vision-section, .process-section.inner { background: var(--bg-surface) !important; }
 .faq-section { background: var(--bg-page) !important; }
 
 /* ── INNER PAGE CARD BACKGROUNDS ── */
+.milestone, .services-overview, .comparison-table, .quick-contact,
 .mission-card, .feature-card, .main-service-card, .info-item,
 .contact-form-card, .faq-item, .timeline-card, .story-visual,
 .achievement-card, .why-card, .choose-card, .compare-card,
@@ -281,9 +283,12 @@ html { background: var(--bg-page) !important; }
 .faq-item p,.timeline-card p,.contact-form-card p { color: #7FA8CC !important; }
 
 /* Text colors across all pages */
-h1, h2, h3, h4, h5, h6 { color: #FFFFFF; }
-p { color: #7FA8CC; }
+h1, h2, h3, h4, h5, h6 { color: #FFFFFF !important; }
+p { color: #7FA8CC !important; }
 .text-muted, .subtitle { color: #7FA8CC !important; }
+.milestone-content h4, .milestone h4 { color: #FFFFFF !important; }
+.milestone-content p, .milestone p { color: #7FA8CC !important; }
+.milestone-icon { background: rgba(74,144,217,0.15) !important; color: #4A90D9 !important; box-shadow: none !important; border: 1px solid rgba(74,144,217,0.3) !important; }
 
 /* Pricing cards */
 .pricing-card { background: var(--bg-card) !important; border-color: var(--border) !important; color: #FFFFFF !important; }
@@ -331,8 +336,104 @@ p { color: #7FA8CC; }
 a { color: #4A90D9; }
 a:hover { color: #6BAED6; }
 
-/* Responsive logo */
+/* ══════════════════════════════════════
+   MOBILE RESPONSIVE — ALL PAGES
+   ══════════════════════════════════════ */
+
 @media (max-width: 768px) {
-    .logo-img  { height: 50px !important; width: auto !important; }
-    .logo-name { font-size: 1.6rem !important; }
+    /* ── Logo ── */
+    .logo-img  { height: 48px !important; width: auto !important; }
+    .logo-name { font-size: 1.45rem !important; }
+    .logo-sub  { display: none !important; }
+
+    /* ── Nav: hide desktop CTA, show hamburger only ── */
+    .header .btn, .nav > div > .btn,
+    .header .btn-primary { display: none !important; }
+    .mobile-menu, .mobile-toggle, .hamburger,
+    [class*="mobile-menu"], [class*="nav-toggle"],
+    [class*="menu-btn"] { display: block !important; }
+
+    /* ── Nav dropdown ── */
+    .nav-links {
+        display: none !important;
+        position: fixed !important;
+        top: 70px !important; left: 0 !important; right: 0 !important; bottom: 0 !important;
+        background: #08121F !important;
+        flex-direction: column !important;
+        justify-content: center !important; align-items: center !important;
+        gap: 2rem !important;
+        border-top: 1px solid rgba(74,144,217,0.2) !important;
+        z-index: 998 !important;
+    }
+    .nav-links.open, .nav-links.active { display: flex !important; }
+    .nav-links a { font-size: 1.25rem !important; color: #FFFFFF !important; }
+    .nav { padding: 0.65rem 0 !important; }
+
+    /* ── Hero / page hero padding ── */
+    .hero, .page-hero, .about-hero, .services-hero, .contact-hero,
+    .pricing-hero, .cyber-hero, .network-hero, .dev-hero,
+    .fullstack-hero, .consulting-hero, .web-hero {
+        padding: 110px 0 60px !important;
+    }
+    .hero-title, .page-hero h1, .hero h1,
+    [class*="hero-title"], [class*="page-title"] {
+        font-size: 2.25rem !important; line-height: 1.15 !important;
+    }
+    .hero-content { grid-template-columns: 1fr !important; gap: 2rem !important; }
+    .hero-card { display: none !important; }
+    .hero-cta, [class*="hero-buttons"] {
+        flex-direction: column !important; gap: 0.75rem !important;
+    }
+    .hero-cta .btn { width: 100% !important; justify-content: center !important; }
+    .hero-stats { grid-template-columns: repeat(3,1fr) !important; gap: 0.75rem !important; }
+
+    /* ── Section titles ── */
+    .section-title { font-size: 1.9rem !important; }
+    .section-sub, .section-subtitle { font-size: 0.95rem !important; }
+
+    /* ── Grids → single column ── */
+    .features-grid, .services-grid, .pricing-grid,
+    .mission-grid, .why-grid, .why-choose-grid,
+    .comparison-grid, .value-grid, .team-grid,
+    .process-grid, .testimonials-grid,
+    .features-grid { grid-template-columns: 1fr !important; gap: 1.25rem !important; }
+    .stats-grid { grid-template-columns: repeat(2,1fr) !important; }
+
+    /* ── Footer ── */
+    .footer-grid, .footer-content { grid-template-columns: 1fr 1fr !important; gap: 1.5rem !important; }
+
+    /* ── Spacing ── */
+    .container { padding: 0 1.25rem !important; }
+    .services-section, .process-section, .testimonials-section,
+    .stats-section, .cta-section, .features-section,
+    .story-section, .mission-section, .why-choose-section,
+    .faq-section, .pricing-section, .contact-form-section,
+    .about-section, .team-section { padding: 60px 0 !important; }
+
+    /* ── Cards ── */
+    .service-card.wide { grid-column: span 1 !important; }
+    .testimonials-grid .testimonial-card:last-child { grid-column: span 1 !important; max-width: 100% !important; }
+    .pricing-card { max-width: 100% !important; }
+
+    /* ── Forms ── */
+    .form-row, [class*="form-grid"] { grid-template-columns: 1fr !important; }
+
+    /* ── FAQ / timeline ── */
+    .faq-grid, .story-grid, .timeline-grid { grid-template-columns: 1fr !important; }
+}
+
+@media (max-width: 480px) {
+    .container { padding: 0 1rem !important; }
+    .logo-img { height: 40px !important; }
+    .logo-name { font-size: 1.2rem !important; }
+    .section-title { font-size: 1.6rem !important; }
+    .hero-title, [class*="hero-title"] { font-size: 1.85rem !important; }
+    .stats-grid { grid-template-columns: 1fr !important; }
+    .footer-grid, .footer-content { grid-template-columns: 1fr !important; }
+    .hero-stats { grid-template-columns: 1fr !important; }
+    .btn { padding: 0.7rem 1.2rem !important; font-size: 0.875rem !important; }
+    .services-section, .process-section, .testimonials-section,
+    .stats-section, .cta-section, .features-section,
+    .story-section, .mission-section, .why-choose-section,
+    .faq-section, .pricing-section { padding: 48px 0 !important; }
 }
